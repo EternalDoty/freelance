@@ -38,6 +38,26 @@ project/
 - **Админ-модуль**: модерация и операционный контроль (`/api/admin`)
 - **Каталог возможностей API**: новый системный endpoint для просмотра доступных модулей (`/api/features`)
 
+## Локальный тестовый запуск
+
+1. Подготовка окружения (поднимет PostgreSQL и Redis, создаст недостающие `.env` файлы):
+   ```bash
+   ./deployment/scripts/local-test-run.sh --prepare-only
+   ```
+2. Полный запуск backend + frontend:
+   ```bash
+   ./deployment/scripts/local-test-run.sh
+   ```
+3. Остановка локального стенда:
+   ```bash
+   ./deployment/scripts/local-test-stop.sh
+   ```
+
+После запуска доступны:
+- Frontend: `http://localhost:3001`
+- Backend: `http://localhost:3000`
+- Swagger: `http://localhost:3000/api-docs`
+
 ## Этапы разработки
 
 1. ✅ Аналитика и постановка задачи
