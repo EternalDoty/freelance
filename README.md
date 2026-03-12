@@ -38,21 +38,6 @@ project/
 - **Админ-модуль**: модерация и операционный контроль (`/api/admin`)
 - **Каталог возможностей API**: новый системный endpoint для просмотра доступных модулей (`/api/features`)
 
-## Запуск всего проекта одной командой
-
-```bash
-./start-project.sh
-```
-
-Скрипт поднимет **весь стек** (PostgreSQL, Redis, backend, frontend, nginx, monitoring) через `deployment/docker-compose.yml`.
-
-Если файла `deployment/.env` нет, он будет создан автоматически с локальными значениями по умолчанию.
-
-Остановка всего проекта:
-```bash
-docker compose --env-file deployment/.env -f deployment/docker-compose.yml down
-```
-
 ## Локальный тестовый запуск
 
 1. Подготовка окружения (поднимет PostgreSQL и Redis, создаст недостающие `.env` файлы):
