@@ -28,6 +28,7 @@ const appealRoutes = require('./routes/appeals');
 const supportRoutes = require('./routes/support');
 const notificationRoutes = require('./routes/notifications');
 const adminRoutes = require('./routes/admin');
+const featureRoutes = require('./routes/features');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -146,6 +147,7 @@ app.use('/api/appeals', appealRoutes);
 app.use('/api/support', supportRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/features', featureRoutes);
 
 // Brute force protection for auth routes
 // app.use('/api/auth', bruteForce.prevent.bind(bruteForce));
