@@ -24,7 +24,6 @@ project/
 ├── tests/                  # Тесты
 └── deployment/             # CI/CD и деплой конфигурации
 ```
-
 ## Текущие функции платформы
 
 - **Аутентификация и доступ**: JWT + GitHub OAuth (`/api/auth`)
@@ -82,7 +81,6 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```bash
 docker compose --env-file deployment/.env -f deployment/docker-compose.yml down
 ```
-
 ## Локальный тестовый запуск
 
 1. Подготовка окружения (поднимет PostgreSQL и Redis, создаст недостающие `.env` файлы):
@@ -97,7 +95,6 @@ docker compose --env-file deployment/.env -f deployment/docker-compose.yml down
    ```bash
    ./deployment/scripts/local-test-stop.sh
    ```
-
 После запуска доступны:
 - Frontend: `http://localhost:3001`
 - Backend: `http://localhost:3000`
